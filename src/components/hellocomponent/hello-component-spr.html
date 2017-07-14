@@ -1,0 +1,9 @@
+<div id="hello-component-spr" xmlns:v-on="http://www.w3.org/1999/xhtml">
+    <!-- hanya bisa satu root element klo pake komponen ini  -->
+    <h1>{{judul}}</h1>
+    <p>{{greetingHello()}}</p>
+    <p class="teks-style-computed">Dari computed property : {{greetingHelloComputed}}</p>
+    <p>Isi dari data Object {{objekvar}}</p>
+    <p>Isi dari data Object Computed Property {{getObjectVar}}</p>
+    <button v-on:click="setObjekComputedVar('Tombol Klik')">Klik Jalan kan Computed</button>
+</div>
