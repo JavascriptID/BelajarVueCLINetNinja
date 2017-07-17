@@ -1,0 +1,13 @@
+<div id="lokal-komponen">
+    <h1>Judul {{pesans}}</h1>
+    <ul>
+        <li v-for="makanan in makanans">
+            <div>Nama : {{makanan}}</div>
+        </li>
+    </ul>
+    <ul>
+        <li v-for="(makanan, index) in makanans">
+            {{index}} Nama : {{makanan}}
+        </li>
+    </ul>
+</div>

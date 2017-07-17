@@ -1,6 +1,7 @@
 export default class {
 
   obj = {};
+  dataString = '';
 
   parseJson(xml) {
     // Create the return object
@@ -40,5 +41,38 @@ export default class {
   static parseJsonStringify(objectJson) {
     const jsonText = JSON.stringify(objectJson);
     return jsonText.trim();
+  }
+
+  getStringData(values) {
+    const stringdata = this.dataString + values;
+    return stringdata;
+  }
+
+  // parser string xml ke bentuk xml file
+  static parseStringToXML(mString) {
+    let mXML;
+    // jika browser IE
+    if (window.ActiveXObject) {
+    // eslint-disable-next-line no-undef
+      const xmlActive = new ActiveXObject('Microsoft.XMLDOM');
+      mXML = xmlActive.loadXML(mString);
+    } else {
+      mXML = new DOMParser().parseFromString(mString, 'text/xml');
+    }
+
+    return mXML;
+  }
+
+  // parser xml to string
+  static parseXMLToString(oxml) {
+    let varString = '';
+    if (window.ActiveXObject) {
+      // jika browser adalah ie;
+      varString = oxml.xml;
+    } else {
+      varString = new XMLSerializer().serializeToString(oxml);
+    }
+
+    return varString;
   }
 }

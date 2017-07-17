@@ -1,0 +1,14 @@
+<div>
+    <h1>{{pesans}}</h1>
+    <ul>
+        <li v-for="makanan in listmakanan">
+            <div>Nama {{makanan}}</div>
+        </li>
+    </ul>
+
+    <ul>
+        <li v-for="(makanan, index) in listmakanan">
+            <div>{{index + 1}} Nama : {{makanan}}</div>
+        </li>
+    </ul>
+</div>

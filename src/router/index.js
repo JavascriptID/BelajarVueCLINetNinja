@@ -3,6 +3,7 @@ import Router from 'vue-router';
 // import Hello from '@/components/Hello';
 // import NoRoute from '@/components/nolinkcomponent/NoRoute';
 // import HelloWorldComp from '@/components/HelloComponent';
+import DaftarMakanan from '@/components/listcomponent/ListMakanan';
 
 Vue.use(Router);
 
@@ -33,6 +34,11 @@ export default new Router({
       path: '/pisah',
       name: 'HelloPisah',
       component: HelloWorldCompSeparated,
+    },
+    {
+      path: '/daftarmakan',
+      name: 'DaftarMakanan',
+      component: DaftarMakanan,
     },
   ],
 });

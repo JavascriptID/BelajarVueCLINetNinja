@@ -1,7 +1,11 @@
+import LocalComponent from '@/components/lokalcomponent/LocalComponent';
 import ParserClass from './ParserClass';
 
 export default {
   name: 'hello-component-spr',
+  components: {
+    'lokal-komponen': LocalComponent,
+  },
   data() {
     return {
       pesan1: 'Hello world dari component separation',
@@ -44,13 +48,13 @@ export default {
     },
     getObjectVar: {
       get() {
-        console.log('get data dari computed');
+        // console.log('get data dari computed');
         return this.objekvarReturn;
       },
       set(value) {
         // const gabunganKata = value + ' ' + this.objekvar.nama + ' ' + this.objekvar.alamat;
         const gabunganKata = `${value} ${this.objekvar.nama} ${this.objekvar.alamat}`;
-        console.log(gabunganKata);
+        // console.log(gabunganKata);
         this.objekvarReturn = gabunganKata;
       },
     },
