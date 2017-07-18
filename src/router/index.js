@@ -4,6 +4,7 @@ import Router from 'vue-router';
 // import NoRoute from '@/components/nolinkcomponent/NoRoute';
 // import HelloWorldComp from '@/components/HelloComponent';
 import DaftarMakanan from '@/components/listcomponent/ListMakanan';
+import NestingComponent from '@/nestingcomponent/NestingComponent';
 
 Vue.use(Router);
 
@@ -12,6 +13,8 @@ const Hello = () => import('@/components/Hello');
 const NoRoute = () => import('@/components/nolinkcomponent/NoRoute');
 const HelloWorldComp = () => import('@/components/HelloComponent');
 const HelloWorldCompSeparated = () => import('@/components/hellocomponent/HelloComponentSpr');
+
+const MainCSSComponent = () => import('@/components/csscomponent/CSSComponent');
 
 export default new Router({
   routes: [
@@ -39,6 +42,16 @@ export default new Router({
       path: '/daftarmakan',
       name: 'DaftarMakanan',
       component: DaftarMakanan,
+    },
+    {
+      path: '/cssdemo',
+      name: 'MainCSSComponent',
+      component: MainCSSComponent,
+    },
+    {
+      path: '/nestingcom',
+      name: 'NestingComponent',
+      component: NestingComponent,
     },
   ],
 });

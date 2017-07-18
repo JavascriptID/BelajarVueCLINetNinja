@@ -38,6 +38,10 @@ export default {
         (objectJson) => {
           console.log(objectJson);
         },
+      ).catch(
+        (error) => {
+          console.log(error);
+        },
       );
     },
   },

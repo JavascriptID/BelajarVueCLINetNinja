@@ -1,0 +1,22 @@
+<div id="webninjas">
+    <ul>
+        <li v-for="(webninja, index) in webninjas" v-on:click="showWebNinja(index)">
+            <h2>{{webninja.nama}}</h2>
+            <h3 v-show="webninja.show">{{webninja.spesial}}</h3>
+        </li>
+    </ul>
+    <h3>Model List Muncul Hilang dari V-For langsung</h3>
+    <ul>
+        <li v-for="(webninja, index) in webninjas" v-on:click="webninja.show = !webninja.show">
+            <h2>{{webninja.nama}}</h2>
+            <h3 v-show="webninja.show">{{webninja.spesial}}</h3>
+        </li>
+    </ul>
+    <h3>Model List Muncul Hilang Fungsi Splice JS</h3>
+    <ul>
+        <li v-for="(webninja, index) in webninjas" v-on:click="showWebNinjaSplice(index, webninja)">
+            <h2>{{webninja.nama}}</h2>
+            <h3 v-show="webninja.show">{{webninja.spesial}}</h3>
+        </li>
+    </ul>
+</div>
