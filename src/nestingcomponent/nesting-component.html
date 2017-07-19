@@ -1,5 +1,10 @@
 <div>
-    <header-component></header-component>
-    <content-component></content-component>
-    <footer-component></footer-component>
+    <!-- menerima event yang dikirim dari header componenet dan diproses di nesting component js  -->
+    <header-component v-bind:judulbindRef="judulrefbindRoot" v-on:update-judul-event="updateJudulKomponen($event)"></header-component>
+    <!-- data prop tidak bisa langsung tulis klo datanya dinamis  -->
+    <!-- contoh di bawah ini adalah untuk konten statis  -->
+    <!-- <content-component arrayprop1="dataProp1"></content-component> -->
+    <!-- sedangkan di bawah ini adalah contoh untuk data dinamis  -->
+    <content-component v-bind:arrayprop1="dataProp1" datastatis1="Kiriman data statis ketik langsung"></content-component>
+    <footer-component v-bind:dataProp2footer="dataProp2" v-bind:dataProp3Numberfooter="dataProp3Number" v-bind:dataPropArrayfooter="dataProp1" v-bind:judulbindRef="judulrefbindRoot"></footer-component>
 </div>

@@ -1,4 +1,10 @@
 <div id="webninjas">
+    <div>
+        <h4>Data Kiriman Props</h4>
+        <p>{{arrayprop1}}</p>
+        <p>Dengan Computed {{setComputedProp1}}</p>
+        <p>Dengan data statis ketik : {{datastatis1}}</p>
+    </div>
     <ul>
         <li v-for="(webninja, index) in webninjas" v-on:click="showWebNinja(index)">
             <h2>{{webninja.nama}}</h2>
@@ -19,4 +25,12 @@
             <h3 v-show="webninja.show">{{webninja.spesial}}</h3>
         </li>
     </ul>
+    <h3>Model List dari Parent Component dan Diterima dari Props</h3>
+    <ul>
+        <li v-for="(item, index) in arrayprop1" v-on:click="item.show = !item.show">
+            <h2>{{item.nama}}</h2>
+            <h3 v-show="item.show">{{item.spesial}}</h3>
+        </li>
+    </ul>
+    <button v-on:click="hapusItemList()">Hapus Item List</button>
 </div>

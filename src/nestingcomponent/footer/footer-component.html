@@ -1,5 +1,10 @@
 <div>
     <footer>
         <p>{{judul}}</p>
+        <p>{{getCopyComputed}}</p>
+        <hr/>
+        <p v-on:click="gantiJudulRef()">Data Dari Root : {{dataRefMutated}}</p>
+        <p>Data dari Event Root : {{dataEventRootComp}}</p>
+        <p>{{getJudulRef}}</p>
     </footer>
 </div>

@@ -15,6 +15,10 @@ Vue.config.productionTip = false;
 // cara register komponen global
 Vue.component('global-komponen', GlobalComponent);
 
+// menggunakan bus untuk mengirim data antar komponen
+const eventbus = new Vue();
+export default eventbus;
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

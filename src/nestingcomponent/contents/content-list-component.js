@@ -1,5 +1,23 @@
+// ada cara menggunakan props untuk mengirim data
+// dari parent komponen ke anak komponen
+// anak komponen menerima data kiriman props dengan nama
+// arrayprop1 , dan kemudian ditampilkan ke html untuk contoh
 export default {
   name: 'content-list',
+  // props: [
+  //   'arrayprop1',
+  //   'datastatis1',
+  // ],
+  props: {
+    arrayprop1: {
+      type: Array,
+      required: true,
+    },
+    datastatis1: {
+      type: String,
+      default: '',
+    },
+  },
   data() {
     return {
       judul: 'Isi Content',
@@ -26,6 +44,15 @@ export default {
       webNinjaShow.show = !webninja.show;
       this.webninjas.splice(index, 1, webNinjaShow);
     },
+    hapusItemList() {
+      if (this.arrayprop1.length > 0) {
+        this.arrayprop1.pop();
+      }
+    },
   },
-  computed: {},
+  computed: {
+    setComputedProp1() {
+      return this.arrayprop1;
+    },
+  },
 };
