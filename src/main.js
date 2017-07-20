@@ -16,8 +16,21 @@ Vue.config.productionTip = false;
 Vue.component('global-komponen', GlobalComponent);
 
 // menggunakan bus untuk mengirim data antar komponen
-const eventbus = new Vue();
-export default eventbus;
+// jika ekspor satu variabel gunakan export default
+// jika banyak variabel bisa gunakan export biasa
+// const EventBus = new Vue();
+// export default EventBus;
+// export const foo = 'foo';
+// export const bar = 'bar';
+// export const data = 'data';
+// export const EventBus = new Vue();
+// export default new Vue();
+// const bus = new Vue();
+// export { bus as default };
+const foo = 'foo';
+const bar = 'bar';
+const EventBus = new Vue();
+export { foo, bar, EventBus };
 
 /* eslint-disable no-new */
 new Vue({
