@@ -10,7 +10,7 @@ before_script:
   - apt-get --quiet install -y nodejs
   - apt-get --quiet update --yes
   - npm -v
-  - npm install -g npm
+#  - npm install -g npm
   - npm install -g vue-cli
 
 stages:
