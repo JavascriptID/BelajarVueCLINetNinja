@@ -6,7 +6,7 @@ before_script:
 
 #  install node js
   - apt-get --quiet install -y build-essential
-  - curl -sL https://deb.nodesource.com/setup_8.x | -E bash -
+  - curl -sL https://deb.nodesource.com/setup_8.x | bash -
   - apt-get --quiet install -y nodejs
   - apt-get --quiet update --yes
   - npm -v
