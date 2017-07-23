@@ -16,6 +16,8 @@ const HelloWorldCompSeparated = () => import('@/components/hellocomponent/HelloC
 
 const MainCSSComponent = () => import('@/components/csscomponent/CSSComponent');
 
+const LifecyclerComponent = () => import('@/complifecycle/LifeComponent');
+
 export default new Router({
   routes: [
     {
@@ -52,6 +54,11 @@ export default new Router({
       path: '/nestingcom',
       name: 'NestingComponent',
       component: NestingComponent,
+    },
+    {
+      path: '/lifecycle',
+      name: 'LifecyclerComponent',
+      component: LifecyclerComponent,
     },
   ],
 });

@@ -1,6 +1,7 @@
 // import { EventBus } from '@/main';
 import Bus from '@/buses/Bus';
 
+
 // menggunakan props dengan validasi tipe props yang dikirimnya
 export default {
   name: 'footer-component',

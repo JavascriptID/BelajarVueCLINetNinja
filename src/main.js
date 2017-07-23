@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 // import ListMakananComponent from './components/listcomponent/ListMakanan';
+// import GlobalComponent from './components/globalkomponen/GlobalComponent';
 import GlobalComponent from './components/globalkomponen/GlobalComponent';
 
 Vue.config.productionTip = false;

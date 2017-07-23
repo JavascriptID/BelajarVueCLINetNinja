@@ -1,8 +1,9 @@
 // import { bus } from '@/main';
 import axios from 'axios';
 import Bus from '@/buses/Bus';
+import { bar, EventBus, foo } from '../../main';
 // import banyak variabel sekaligus dari main
-import { foo, bar, EventBus } from '@/main';
+// import { foo, bar, EventBus } from '@/main';
 // import EventBus from '../../main';
 
 export default {
@@ -53,12 +54,10 @@ export default {
           console.log(response);
         })
         .catch(
-        (error) => {
-          console.log(error);
-        });
+          (error) => {
+            console.log(error);
+          });
     },
   },
-  computed: {
-
-  },
+  computed: {},
 };
