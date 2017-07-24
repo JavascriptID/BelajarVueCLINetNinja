@@ -1,7 +1,8 @@
-<div id="header-life-component">
+<div id="header-life-component" xmlns:v-on="http://www.w3.org/1999/xhtml">
   <header>
     <h1>{{judul}}</h1>
-    <p>Data dari Props Root : </p>
+    <p v-on:click="gantiJudulDenganPropGetSet()">Data dari Props Root Setelah Computed : {{judulPropsComputed}}</p>
+    <p>Data Props dalam bentuk inisialisasi : {{dataPropsInit}}</p>
     <p>Data dari Bus : </p>
     <button>Ganti Judul Dengan Bus</button>
   </header>

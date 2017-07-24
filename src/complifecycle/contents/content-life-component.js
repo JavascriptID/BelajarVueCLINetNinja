@@ -12,7 +12,17 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    showSpesial(index, artikel) {
+      // ganti parameter show dan hide dengan splice dan index
+      const isShow = !artikel.isShow;
+      if (index !== -1) {
+        const artikelget = this.listartikel[index];
+        artikelget.isShow = isShow;
+        this.listartikel.splice(index, 1, artikelget);
+      }
+    },
+  },
   computed: {},
 };
 

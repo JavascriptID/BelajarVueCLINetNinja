@@ -1,3 +1,10 @@
-<div id="content-life">
-
+<div id="content-life" xmlns:v-on="http://www.w3.org/1999/xhtml">
+  <ul>
+    <li v-for="(artikel, index) in listartikel" v-on:click="showSpesial(index, artikel)">
+      <div>
+        <h2>{{index + 1}} {{artikel.nama}}</h2>
+        <h3 v-show="artikel.isShow">Spesial = {{artikel.spesialkonten}}</h3>
+      </div>
+    </li>
+  </ul>
 </div>

@@ -11,7 +11,8 @@ export default {
     return {
       judul: 'Vue JS Lifecycle Component',
       dataEvent: 'Data Header dikirim dari Header',
-      dataProps: 'Data Header dari Main Component Props',
+      dataProps: this.judulPropsBinding,
+      dataPropsInit: this.judulPropsBinding,
     };
   },
   methods: {
@@ -21,14 +22,18 @@ export default {
     sendDataBus() {
 
     },
+    gantiJudulDenganPropGetSet() {
+      this.judulPropsComputed = 'Set Get ';
+    },
   },
   computed: {
     judulPropsComputed: {
       get() {
+        // computed property akan berjalan jika bagian data utama nya diubah
         return this.dataProps;
       },
-      set() {
-        this.dataProps = this.judulPropsBinding;
+      set(value) {
+        this.dataProps = `${this.judulPropsBinding} dengan ${value}`;
       },
     },
   },

@@ -56,7 +56,7 @@ export default new Router({
       component: NestingComponent,
     },
     {
-      path: '/lifecycle',
+      path: '/lifec',
       name: 'LifecyclerComponent',
       component: LifecyclerComponent,
     },
