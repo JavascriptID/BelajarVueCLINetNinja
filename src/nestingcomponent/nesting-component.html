@@ -1,5 +1,6 @@
 <div>
     <!-- menerima event yang dikirim dari header componenet dan diproses di nesting component js  -->
+    <p>{{dataProp1}}</p>
     <header-component v-bind:judulbindRef="judulrefbindRoot" v-on:update-judul-event="updateJudulKomponen($event)"></header-component>
     <!-- data prop tidak bisa langsung tulis klo datanya dinamis  -->
     <!-- contoh di bawah ini adalah untuk konten statis  -->

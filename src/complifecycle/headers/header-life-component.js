@@ -6,6 +6,10 @@ export default {
       type: String,
       default: 'Judul default',
     },
+    judulPropsheader: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
@@ -13,6 +17,7 @@ export default {
       dataEvent: 'Data Header dikirim dari Header',
       dataProps: this.judulPropsBinding,
       dataPropsInit: this.judulPropsBinding,
+      dataPropsHeader: this.judulPropsheader,
     };
   },
   methods: {
@@ -23,7 +28,11 @@ export default {
 
     },
     gantiJudulDenganPropGetSet() {
-      this.judulPropsComputed = 'Set Get ';
+      this.judulPropsComputed = 'Set Get';
+    },
+    gantiJudulDariProps() {
+      console.log('ganti judul props');
+      this.dataPropsHeader = 'Vue Wizards Judulnya';
     },
   },
   computed: {

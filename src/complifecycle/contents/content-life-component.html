@@ -1,10 +1,14 @@
 <div id="content-life" xmlns:v-on="http://www.w3.org/1999/xhtml">
   <ul>
-    <li v-for="(artikel, index) in listartikel" v-on:click="showSpesial(index, artikel)">
+    <li v-for="(artikel, index) in listartikelpropsinit" v-on:click="showSpesial(index, artikel)">
       <div>
         <h2>{{index + 1}} {{artikel.nama}}</h2>
-        <h3 v-show="artikel.isShow">Spesial = {{artikel.spesialkonten}}</h3>
+        <h3 v-show="artikel.isShow">Spesial == {{artikel.spesialkonten}}</h3>
       </div>
     </li>
   </ul>
+
+  <button v-on:click="hapus1Artikel()">Hapus Artikel</button>
+  <button v-on:click="addDataProps()">Tambahkan data Props</button>
+
 </div>

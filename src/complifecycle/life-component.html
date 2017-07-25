@@ -1,5 +1,9 @@
 <div id="life-component">
-  <app-header v-bind:judulPropsBinding="dataPropHeader"></app-header>
-  <app-content></app-content>
-  <app-footer></app-footer>
+  <p>Array : {{datalistParent}}</p>
+  <p>Data Judul Parent : {{judulprops}}</p>
+  <app-header v-bind:judulPropsBinding="dataPropHeader" v-bind:judulPropsheader="judulprops"></app-header>
+  <app-content v-bind:arrayartikelprop="datalistParent"></app-content>
+  <hr>
+  <!--<app-content v-bind:arrayartikelprop="datalistParent"></app-content>-->
+  <app-footer v-bind:judulpropsfooter="judulprops" v-bind:arrayProps="datalistParent"></app-footer>
 </div>
