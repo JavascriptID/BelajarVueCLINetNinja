@@ -23,7 +23,10 @@ export default {
     };
   },
   methods: {
-
+    gantiJudulEventFooter(dataEvent) {
+      this.judul = dataEvent;
+      this.judulprops = dataEvent;
+    },
   },
   computed: {
 

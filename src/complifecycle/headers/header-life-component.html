@@ -6,5 +6,11 @@
     <p>Data dari Bus : </p>
     <button>Ganti Judul Dengan Bus</button>
     <p v-on:click="gantiJudulDariProps()">Judul dari Props Berubah : {{dataPropsHeader}}</p>
+    <button v-on:click="sendDataEvent()">Ganti Judul Dengan Event</button>
+    <p>Data dari event tidak langsung mengubah data yang ada di child component data() . Tapi 
+      data props langsung yang ditampilkan ke html bisa ikutan berubah
+    </p>
+    <p>Judul dari Event : {{judulPropsEventComputed}} {{judulPropsheader}}</p>
+    <p>Judul dari Event Computed Get Set : {{judulPropsEventComputedGetSet}}</p>
   </header>
 </div>

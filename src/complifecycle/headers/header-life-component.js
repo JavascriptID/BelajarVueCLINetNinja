@@ -1,4 +1,6 @@
 // header dari komponen yang akan disatukan dengan komponen utama yang bernama life component
+import { TAG_BUS_HEADER, BusEventVue } from '@/konstans/BusesEvent';
+
 export default {
   name: 'header-life-component',
   props: {
@@ -18,14 +20,17 @@ export default {
       dataProps: this.judulPropsBinding,
       dataPropsInit: this.judulPropsBinding,
       dataPropsHeader: this.judulPropsheader,
+      datacomputedevent: this.judulPropsheader,
     };
   },
   methods: {
     sendDataEvent() {
-
+      // mengirim data event dari child component ke parent component
+      this.$emit('gantiJudul', 'Vue JS Event Wizards');
     },
     sendDataBus() {
-
+      // kirim data ke komponen lain dengan event bus
+      BusEventVue.$emit(TAG_BUS_HEADER, 'Hello Word Event Bus Vue');
     },
     gantiJudulDenganPropGetSet() {
       this.judulPropsComputed = 'Set Get';
@@ -43,6 +48,22 @@ export default {
       },
       set(value) {
         this.dataProps = `${this.judulPropsBinding} dengan ${value}`;
+      },
+    },
+    judulPropsEventComputed() {
+      console.log('props berjalan event');
+      // return this.dataPropsHeader;
+      // jika sumbernya adalah props maka ikutan berubah juga
+      return `Getter Langsung ${this.judulPropsheader}`;
+    },
+    judulPropsEventComputedGetSet: {
+      get() {
+        // tidak bisa berjalan langsung jika menggunakan props
+        console.log('return props event');
+        return this.datacomputedevent;
+      },
+      set() {
+        this.datacomputedevent = this.judulPropsheader;
       },
     },
   },

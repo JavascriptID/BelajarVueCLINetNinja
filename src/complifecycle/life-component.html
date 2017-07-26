@@ -1,7 +1,7 @@
 <div id="life-component">
   <p>Array : {{datalistParent}}</p>
   <p>Data Judul Parent : {{judulprops}}</p>
-  <app-header v-bind:judulPropsBinding="dataPropHeader" v-bind:judulPropsheader="judulprops"></app-header>
+  <app-header v-bind:judulPropsBinding="dataPropHeader" v-bind:judulPropsheader="judulprops" v-on:gantiJudul="gantiJudulEventFooter($event)"></app-header>
   <app-content v-bind:arrayartikelprop="datalistParent"></app-content>
   <hr>
   <!--<app-content v-bind:arrayartikelprop="datalistParent"></app-content>-->

@@ -1,3 +1,5 @@
+import { TAG_BUS_HEADER, BusEventVue } from '@/konstans/BusesEvent';
+
 // komponen yang berisi bagian footer komponen nya
 export default {
   name: 'footer-life-component',
@@ -7,7 +9,7 @@ export default {
       default: '',
     },
     arrayProps: {
-      type: String,
+      type: Array,
       default: [],
     },
   },
