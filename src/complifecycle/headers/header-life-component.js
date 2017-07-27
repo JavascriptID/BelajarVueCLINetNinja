@@ -23,6 +23,12 @@ export default {
       datacomputedevent: this.judulPropsheader,
     };
   },
+  created() {
+    // menerima bus dari satu tempat
+    BusEventVue.$on(TAG_BUS_HEADER, (data) => {
+      this.judul = data;
+    });
+  },
   methods: {
     sendDataEvent() {
       // mengirim data event dari child component ke parent component

@@ -17,7 +17,13 @@ export default {
     return {
       judul: 'Copyright 2017 Vue JS Footer Component',
       arrayPropinit: this.arrayProps,
+      databusHeader: '',
     };
+  },
+  created() {
+    BusEventVue.$on(TAG_BUS_HEADER, (databus) => {
+      this.databusHeader = databus;
+    });
   },
   methods: {
     changeArray() {

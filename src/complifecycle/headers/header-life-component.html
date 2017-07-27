@@ -4,7 +4,7 @@
     <p v-on:click="gantiJudulDenganPropGetSet()">Data dari Props Root Setelah Computed : {{judulPropsComputed}}</p>
     <p>Data Props dalam bentuk inisialisasi : {{dataPropsInit}}</p>
     <p>Data dari Bus : </p>
-    <button>Ganti Judul Dengan Bus</button>
+    <button v-on:click="sendDataBus()">Ganti Judul Dengan Bus</button>
     <p v-on:click="gantiJudulDariProps()">Judul dari Props Berubah : {{dataPropsHeader}}</p>
     <button v-on:click="sendDataEvent()">Ganti Judul Dengan Event</button>
     <p>Data dari event tidak langsung mengubah data yang ada di child component data() . Tapi 
