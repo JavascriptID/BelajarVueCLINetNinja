@@ -31,5 +31,32 @@ export default {
   computed: {
 
   },
+  // lifecycle hooks
+  beforeCreate() {
+    console.log('before create jalan');
+    alert('Alert : before create');
+  },
+  created() {
+    console.log('created jalan');
+    alert('Alert : created');
+  },
+  beforeMount() {
+    alert('Alert : Before Mount');
+  },
+  mounted() {
+    alert('Alert : Mounted');
+  },
+  beforeUpdate() {
+    alert('Alert : Before Update');
+  },
+  updated() {
+    alert('Alert : Updated');
+  },
+  beforeDestroy() {
+    alert('Alert : Before Destroy');
+  },
+  destroyed() {
+    alert('Alert : Destroyed');
+  },
 };
 
