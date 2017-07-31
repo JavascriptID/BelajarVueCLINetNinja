@@ -18,6 +18,8 @@ const MainCSSComponent = () => import('@/components/csscomponent/CSSComponent');
 
 const LifecyclerComponent = () => import('@/complifecycle/LifeComponent');
 
+const SlotComponent = () => import('@/slotkomponen/SlotComponent');
+
 export default new Router({
   routes: [
     {
@@ -59,6 +61,11 @@ export default new Router({
       path: '/lifec',
       name: 'LifecyclerComponent',
       component: LifecyclerComponent,
+    },
+    {
+      path: '/slots',
+      name: 'SlotComponent',
+      component: SlotComponent,
     },
   ],
 });
